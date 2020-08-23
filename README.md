@@ -16,5 +16,5 @@ npm run build
 ```
 
 For a detailed explanation on how things work, check out the [guide](https://github.com/facebook/create-react-app).
-# retailsense-webapp
+
 # react-admin-app
