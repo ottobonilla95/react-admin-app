@@ -1,20 +1,15 @@
-# Admin App
+![React-Redux](https://miro.medium.com/proxy/1*VeM-5lsAtrrJ4jXH96h5kg.png)
 
-> A material design reactjs admin App
+## Description
+This is a react-redux app.
 
-## Build Setup
 
-``` bash
-# install dependencies
-npm install
+## Demo
+To see the full demo click here [Here](http://128.199.43.48/adminapp/).
 
-# serve with hot reload at localhost:3000
-npm start
+## BackEnd API
+The backend was build in python flask.
 
-# build for production with minification
-npm run build
-```
+Check the full repository [Here](https://github.com/ottobonilla95/python-admin-web-api).
 
-For a detailed explanation on how things work, check out the [guide](https://github.com/facebook/create-react-app).
-
-# react-admin-app
+   
