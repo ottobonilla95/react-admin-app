@@ -1,6 +1,6 @@
-# Reactify
+# Admin App
 
-> A material design reactjs admin template
+> A material design reactjs admin App
 
 ## Build Setup
 

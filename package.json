@@ -1,7 +1,7 @@
 {
-  "name": "reactify",
+  "name": "adminapp",
   "version": "5.4.1",
-  "description": "A Material Design Reactjs + Redux Admin Template",
+  "description": "A Material Design Reactjs + Reactify + Redux Admin app",
   "author": "The Iron Network",
   "license": "ISC",
   "scripts": {
