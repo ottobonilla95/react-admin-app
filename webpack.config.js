@@ -11,10 +11,10 @@ const FriendlyErrorsWebpackPlugin = require("friendly-errors-webpack-plugin");
 // In development, we always serve from the root. This makes config easier.
 
 // dev
-const publicPath = "/";
+// const publicPath = "/";
 
 // prod
-// const publicPath = "/agnitu_webapp/";
+const publicPath = "/adminwebapp/";
 
 // Make sure any symlinks in the project folder are resolved:
 const appDirectory = fs.realpathSync(process.cwd());

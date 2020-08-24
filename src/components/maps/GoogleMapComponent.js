@@ -10,7 +10,7 @@ const defaultMapProps = {
 const GoogleMapComponent = ({ children, onGoogleMapClick }) => {
   return (
     <GoogleMap
-      bootstrapURLKeys={{ key: "AIzaSyACfKO_wU8Zco68J0BtrVmq0SRImDuwJx4" }}
+      bootstrapURLKeys={{ key: "AIzaSyCbuJQILg6ZPk-ousi5mTDdtw-z4ihbMno" }}
       yesIWantToUseGoogleMapApiInternals={true}
       center={defaultMapProps.center}
       zoom={defaultMapProps.zoom}

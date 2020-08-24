@@ -40,7 +40,7 @@ const errorHandler = (error) => {
 
 const customAxios = axios.create({
   baseURL: "http://localhost:5000/",
-  // baseURL: "http://ec2-18-234-74-162.compute-1.amazonaws.com/agnitu_webapi/",
+  // baseURL: "http://128.199.43.48/adminapp_webapi/",
 });
 
 customAxios.interceptors.request.use((request) => requestHandler(request));
