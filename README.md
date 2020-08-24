@@ -5,7 +5,7 @@ This is a react-redux app.
 
 
 ## Demo
-To see the full demo click here [Here](http://128.199.43.48/adminapp/).
+To see the full demo click here [Here](http://128.199.43.48/adminwebapp/user/login).
 
 ## BackEnd API
 The backend was build in python flask.
