@@ -1,20 +1,32 @@
-# Admin App
+![React-Redux](https://miro.medium.com/proxy/1*VeM-5lsAtrrJ4jXH96h5kg.png)
 
-> A material design reactjs admin App
+## Description
+This is a react-redux app.
 
-## Build Setup
 
-``` bash
-# install dependencies
-npm install
+## Demo
+To see the full demo click here [Here](http://128.199.43.48/adminwebapp/user/login).
 
-# serve with hot reload at localhost:3000
-npm start
+### Tutorial
+Log In with the superAdmin user.
 
-# build for production with minification
-npm run build
-```
+#### username: 
+otto
+#### password: 
+121212
 
-For a detailed explanation on how things work, check out the [guide](https://github.com/facebook/create-react-app).
+With the superAdmin user you can create companies and their users.
 
-# react-admin-app
+Steps:
+
+1. Create your company and at least one user.
+2. Login with the user you just have created.
+3. Admin customers, products, agent, tasks with your user.
+
+
+## BackEnd API
+The backend was build in python flask.
+
+Check the full repository [Here](https://github.com/ottobonilla95/python-admin-web-api).
+
+   
