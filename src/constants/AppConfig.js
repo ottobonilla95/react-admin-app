@@ -1,5 +1,5 @@
 const AppConfig = {
-  googleApiKey: "AIzaSyDbVnsfMzmkGO2s2d-4JbblamUuJLeeAO4",
+  googleApiKey: "",
   appLogo: require("Assets/img/site-logo.png"), // App Logo
   brandName: "AdminApp", // Brand Name
   navCollapsed: false, // Sidebar collapse
