@@ -1,7 +1,7 @@
 import { combineReducers } from "redux";
 import authReducers from "./auth/reducers";
 import settingsReducers from "./settings/reducers";
-import sidebarReducers from "./settings/SidebarReducer";
+import sidebarReducers from "./settings/sidebarReducer";
 import customerReducer from "./customer/reducers";
 import agentReducer from "./agent/reducers";
 import productReducer from "./product/reducers";

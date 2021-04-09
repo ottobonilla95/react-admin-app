@@ -11,6 +11,7 @@ import Avatar from "@material-ui/core/Avatar";
 
 // material ui
 import LinearProgress from "@material-ui/core/LinearProgress";
+import { makeStyles } from "@material-ui/core/styles";
 
 // delete confirmation dialog
 import ConfirmDialogSlide from "../../../components/dialogs/ConfirmDialogSlide";
@@ -45,9 +46,23 @@ import {
 
 import history from "../../../utils/history";
 
+const useStyles = makeStyles({
+  messageContainer: {
+    width: "100%",
+    paddingLeft: 20,
+    paddingRight: 20,
+    textAlign: "center",
+  },
+  message: {
+    backgroundColor: "#f5f5f5",
+    borderRadius: 5,
+    padding:10
+  },
+});
+
 const CompanyList = (props) => {
+  const classes = useStyles();
   const [currentCompany, setCurrentCompany] = useState(undefined);
-  const [editCompany, setEditCompany] = useState({});
 
   const [companyToDelete, setCompanyToDelete] = useState(undefined);
 
@@ -63,19 +78,6 @@ const CompanyList = (props) => {
   const opnAddNewCompanyModal = (e) => {
     e.preventDefault();
     history.push(`${props.match.path}create`);
-  };
-
-  // submit form
-  const submitCompanyForm = (data) => {
-    if (editCompany.id) {
-      props.updateCompany({ ...data, id: editCompany.id });
-    } else {
-      props.createCompany(data);
-    }
-  };
-
-  const onEditCompany = (id) => {
-    history.push(`${props.match.path}edit?id=${id}`);
   };
 
   return (
@@ -175,47 +177,15 @@ const CompanyList = (props) => {
               </tbody>
               <tfoot className="border-top">
                 <tr>
-                  <td colSpan="100%">
-                    {/* <Pagination className="mb-0 py-10 px-10">
-                      <PaginationItem>
-                        <PaginationLink previous href="#" />
-                      </PaginationItem>
-                      <PaginationItem active>
-                        <PaginationLink
-                          href="#"
-                          onClick={(e) => e.preventDefault()}
-                        >
-                          1
-                        </PaginationLink>
-                      </PaginationItem>
-                      <PaginationItem>
-                        <PaginationLink
-                          href="#"
-                          onClick={(e) => e.preventDefault()}
-                        >
-                          2
-                        </PaginationLink>
-                      </PaginationItem>
-                      <PaginationItem>
-                        <PaginationLink
-                          href="#"
-                          onClick={(e) => e.preventDefault()}
-                        >
-                          3
-                        </PaginationLink>
-                      </PaginationItem>
-                      <PaginationItem>
-                        <PaginationLink
-                          next
-                          href="#"
-                          onClick={(e) => e.preventDefault()}
-                        />
-                      </PaginationItem>
-                    </Pagination> */}
-                  </td>
+                  <td colSpan="100%"></td>
                 </tr>
               </tfoot>
             </table>
+            {props.company.data.items && props.company.data.items.length === 0 && (
+              <div className={classes.messageContainer}>
+                <p className={classes.message}>No companies found</p>
+              </div>
+            )}
           </div>
           {props.company.loading && <RctSectionLoader />}
         </RctCollapsibleCard>

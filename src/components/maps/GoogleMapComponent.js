@@ -1,6 +1,9 @@
 import React from "react";
 import GoogleMap from "google-map-react";
 
+// app config
+import AppConfig from '../../constants/AppConfig';
+
 const defaultMapProps = {
   center: [51.5074, 0.1278],
   zoom: 9,
@@ -10,7 +13,7 @@ const defaultMapProps = {
 const GoogleMapComponent = ({ children, onGoogleMapClick }) => {
   return (
     <GoogleMap
-      bootstrapURLKeys={{ key: "AIzaSyCbuJQILg6ZPk-ousi5mTDdtw-z4ihbMno" }}
+      bootstrapURLKeys={{ key: AppConfig.googleApiKey }}
       yesIWantToUseGoogleMapApiInternals={true}
       center={defaultMapProps.center}
       zoom={defaultMapProps.zoom}

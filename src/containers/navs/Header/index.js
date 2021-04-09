@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import { connect } from "react-redux";
-import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -8,12 +7,10 @@ import { Link } from "react-router-dom";
 import screenfull from "screenfull";
 import Tooltip from "@material-ui/core/Tooltip";
 import MenuIcon from "@material-ui/icons/Menu";
-import Add from "@material-ui/icons/Add";
 import { withRouter } from "react-router-dom";
 
 // actions
 import { collapsedSidebarAction } from "../../../redux/settings/actions";
-import { openModalFrom } from "../../../redux/task/actions";
 
 // intl messages
 import IntlMessages from "../../../utils/IntlMessages";
@@ -120,25 +117,6 @@ const Header = (props) => {
           )}
         </div>
         <ul className="navbar-right list-inline mb-0">
-          {!horizontalMenu && (
-            <li className="list-inline-item">
-              <Tooltip
-                title={<IntlMessages id="task.new" />}
-                placement="bottom"
-              >
-                <Button
-                  onClick={() => props.openModalFrom()}
-                  variant="contained"
-                  className="upgrade-btn tour-step-4 text-white"
-                  color="primary"
-                  startIcon={<Add />}
-                >
-                  <IntlMessages id="task.new" />
-                </Button>
-              </Tooltip>
-            </li>
-          )}
-
           <li className="list-inline-item">
             <Tooltip title="Full Screen" placement="bottom">
               <IconButton
@@ -163,6 +141,5 @@ const mapStateToProps = ({ settings, task, agent }) => {
 export default withRouter(
   connect(mapStateToProps, {
     collapsedSidebarAction,
-    openModalFrom,
   })(Header)
 );

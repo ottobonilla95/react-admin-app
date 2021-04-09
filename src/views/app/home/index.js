@@ -10,8 +10,6 @@ import { makeStyles } from "@material-ui/core/styles";
 // IntlMessages
 import IntlMessages from "../../../utils/IntlMessages";
 
-import "./styles.css";
-
 // reactstrap
 import { DropdownToggle, DropdownMenu, Dropdown } from "reactstrap";
 
@@ -20,7 +18,6 @@ import { Scrollbars } from "react-custom-scrollbars";
 
 // components
 import AgentSideBar from "./AgentSideBar";
-import TaskListSideBar from "./TaskListSideBar";
 import CustomerMarker from "../../../components/maps/CustomerMarker";
 import GoogleMapComponent from "../../../components/maps/GoogleMapComponent";
 
@@ -33,11 +30,16 @@ import { getCustomers } from "../../../redux/customer/actions";
 import { getTasks } from "../../../redux/task/actions";
 import { toggleShowCustomer } from "../../../redux/settings/actions";
 
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
-
 const useStyles = makeStyles((theme) => ({
   menu: {
     backgroundColor: "red !important",
+  },
+  fullMapWrapper: {
+    position: "absolute",
+    top: 0,
+    bottom: 0,
+    right: 0,
+    left: 0,
   },
 }));
 
@@ -53,7 +55,7 @@ const Home = (props) => {
   }, []);
   return (
     <>
-      <div className="full-map-wrapper">
+      <div className={classes.fullMapWrapper}>
         <GoogleMapComponent>
           {props.settings.showCustomers &&
             props.customer.data.items.map((customer) => (
@@ -124,17 +126,6 @@ const Home = (props) => {
             </Tooltip>
           </DropdownToggle>
         </Dropdown>
-        <br />
-        <Dropdown isOpen={false} toggle={() => setCustomizer("tasklist")}>
-          <DropdownToggle className="bg-warning">
-            <Tooltip
-              title={<IntlMessages id="sidebar.task" />}
-              placement="left"
-            >
-              <i className="zmdi zmdi-format-list-numbered font-2x tour-step-6"></i>
-            </Tooltip>
-          </DropdownToggle>
-        </Dropdown>
       </div>
       <Drawer
         anchor={"right"}
@@ -148,7 +139,6 @@ const Home = (props) => {
         }}
       >
         {customizer === "agent" && <AgentSideBar {...props.agent} />}
-        {customizer === "tasklist" && <TaskListSideBar {...props.task} />}
       </Drawer>
     </>
   );

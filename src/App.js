@@ -10,10 +10,6 @@ import RctThemeProvider from "./RctThemeProvider";
 import { NotificationContainer } from "react-notifications";
 // css
 import "./utils/AppStyle";
-
-// firebase
-import "./helpers/firebase";
-
 // redux
 import { connect } from "react-redux";
 import { signinUserSuccess } from "./redux/auth/actions";
@@ -21,8 +17,8 @@ import { LoadUserTheme, LoadUserLanguage } from "./redux/settings/actions";
 
 // app component
 const ViewApp = React.lazy(() => import("./views/app"));
-
 const ViewUser = React.lazy(() => import("./views/user"));
+const GestView = React.lazy(() => import("./views/guest"));
 
 // router
 import ProtectedRoute from "./utils/ProtectedRoute";
@@ -56,6 +52,8 @@ const MainApp = (props) => {
                 authUser={isLogginIn || props.auth.isLoggedIn}
               />
               <Route path="/user" component={ViewUser}></Route>
+              <Route path="/gest" component={GestView}></Route>
+
             </Switch>
           </Router>
         </Suspense>

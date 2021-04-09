@@ -45,7 +45,7 @@ export const signinUserFailure = () => ({
 });
 
 /**
- * Redux Action To Signup User In Firebase
+ * Redux Action To Signup User 
  */
 export const signupUser = (userData) => ({
   type: SIGNUP_USER,
@@ -68,7 +68,7 @@ export const signUpUserFailure = () => ({
 });
 
 /**
- * Redux Action To Signout User From  Firebase
+ * Redux Action To Signout
  */
 export const logoutUser = () => ({
   type: LOGOUT_USER,

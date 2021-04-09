@@ -3,7 +3,6 @@
  */
 import { all, call, fork, put, takeEvery, delay } from "redux-saga/effects";
 
-// import { auth } from "../../helpers/firebase";
 
 import api from "../../api";
 

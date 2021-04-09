@@ -1,15 +1,5 @@
-export const firebaseConfig = {
-  apiKey: "AIzaSyDaUu0a1OmvLgOjSARtJ8KVwtUQIWoHgi0",
-  authDomain: "agnituretailsense.firebaseapp.com",
-  databaseURL: "https://agnituretailsense.firebaseio.com",
-  projectId: "agnituretailsense",
-  storageBucket: "agnituretailsense.appspot.com",
-  messagingSenderId: "976241566008",
-  appId: "1:976241566008:web:5d92e881705d72924a61cd",
-  measurementId: "G-RRVXS6JQ9P",
-};
-
 const AppConfig = {
+  googleApiKey: "AIzaSyDbVnsfMzmkGO2s2d-4JbblamUuJLeeAO4",
   appLogo: require("Assets/img/site-logo.png"), // App Logo
   brandName: "AdminApp", // Brand Name
   navCollapsed: false, // Sidebar collapse
